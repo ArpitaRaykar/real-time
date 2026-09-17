@@ -1,1 +1,62 @@
+Real-Time Accelerometer Data 
+Project Overview
 
+This project implements a real-time accelerometer data pipeline using Phyphox, Python, Apache Kafka, and PostgreSQL.
+
+The accelerometer values (X, Y, and Z) are collected from a smartphone using the Phyphox Remote Access API, sent to Kafka using a Python Producer, consumed using a Python Consumer, and finally stored in a PostgreSQL database.
+
+System Architecture
+📱 Phyphox
+     │
+     │ Accelerometer X, Y, Z
+     ▼
+🐍 Python Function
+get_accelerometer_data()
+     │
+     ▼
+📤 Kafka Producer
+     │
+     ▼
+🟠 Apache Kafka
+accelerometer-data
+     │
+     ▼
+📥 Kafka Consumer
+     │
+     ▼
+🐍 Database Function
+insert_into_database()
+     │
+     ▼
+🐘 PostgreSQL
+kafka_demo
+     │
+     ▼
+accelerometer table
+
+Technologies Used
+Phyphox – Smartphone sensor data collection
+Python – Data collection, Kafka Producer and Consumer
+Apache Kafka 4.3.1 – Real-time data streaming
+PostgreSQL 18.6 – Data storage
+kafka-python – Python Kafka client
+psycopg – Python PostgreSQL connector
+Requests – Communication with Phyphox API
+
+Project Structure
+real_time_analytics/
+│
+├── accelerometer.py
+├── producer.py
+├── consumer.py
+└── venv/
+accelerometer.py
+
+Contains the function:
+get_accelerometer_data()
+It connects to the Phyphox Remote Access API and retrieves the accelerometer values.
+
+producer.py
+
+Uses the accelerometer function and sends the readings to the Kafka topic:
+accelerometer-data
