@@ -1,13 +1,10 @@
-Yes — you mean you want the **code added into the README content you already have**, not a separate document.
-
-For GitHub, put the following **complete content into `README.md`**. It includes the project description plus the question-wise code.
 
 ````markdown
-# 📱 Real-Time Accelerometer Data Pipeline
+#  Real-Time Accelerometer Data Pipeline
 
 A real-time data streaming project that collects accelerometer data from a smartphone using **Phyphox**, sends the data through **Apache Kafka**, consumes it using **Python**, and stores the readings in **PostgreSQL**.
 
-## 🔄 Architecture
+##  Architecture
 
 ```text
 Phyphox (Smartphone)
@@ -25,7 +22,7 @@ Database Insert Function
 PostgreSQL
 ````
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * Python
 * Phyphox
@@ -35,7 +32,7 @@ PostgreSQL
 * psycopg
 * requests
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 real_time_analytics/
@@ -239,7 +236,7 @@ Inserted into PostgreSQL: {'x': 0.66, 'y': 0.93, 'z': 9.7}
 
 ---
 
-# 🗄️ PostgreSQL Database
+#  PostgreSQL Database
 
 ## Create Database
 
@@ -270,7 +267,7 @@ LIMIT 10;
 
 ---
 
-# 🟠 Kafka Topic
+#  Kafka Topic
 
 Create the Kafka topic:
 
@@ -293,7 +290,7 @@ bin/kafka-topics.sh \
 
 ---
 
-# 📦 Installation
+#  Installation
 
 Create a virtual environment:
 
@@ -315,7 +312,7 @@ pip install kafka-python psycopg[binary] requests
 
 ---
 
-# ▶️ How to Run
+#  How to Run
 
 ## 1. Start Kafka
 
@@ -367,25 +364,25 @@ LIMIT 10;
 
 ---
 
-# 📊 Data Flow
+#  Data Flow
 
 ```text
-📱 Phyphox
+ Phyphox
      ↓
 get_accelerometer_data()
      ↓
-🐍 Python Kafka Producer
+ Python Kafka Producer
      ↓
-🟠 Apache Kafka
+ Apache Kafka
      ↓
 Kafka Consumer
      ↓
 insert_into_database()
      ↓
-🐘 PostgreSQL
+ PostgreSQL
 ```
 
-# 🎯 Assignment Requirements
+#  Assignment Requirements
 
 | Question | Implementation                                        |
 | -------- | ----------------------------------------------------- |
@@ -394,10 +391,10 @@ insert_into_database()
 | Q3       | Kafka Consumer to read data                           |
 | Q4       | Function to insert data into PostgreSQL               |
 
-# 👩‍💻 Author
+#  Author
 
 **Arpita Raykar**
-
+25PG00013
 MSc Data Science
 
 ````
