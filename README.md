@@ -1,6 +1,6 @@
 
 
-#  Real-Time Accelerometer Data Pipeline
+#  Real-Time Accelerometer with Kafka
 
 A real-time data streaming project that collects accelerometer data from a smartphone using **Phyphox**, sends the data through **Apache Kafka**, consumes it using **Python**, and stores the readings in **PostgreSQL**.
 
